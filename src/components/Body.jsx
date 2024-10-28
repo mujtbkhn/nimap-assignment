@@ -5,7 +5,7 @@ import Favorite from "./Favorite";
 import { Suspense, lazy } from "react";
 import ExploreMovies from "./ExploreMovies";
 import { Toaster } from "react-hot-toast";
-import TopRated from "./Toprated";
+import TopRated from "./TopRated";
 import Upcoming from "./Upcoming";
 import NowPlaying from "./NowPlaying";
 
