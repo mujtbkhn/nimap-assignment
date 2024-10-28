@@ -92,7 +92,7 @@ const Header = () => {
               {searchTerm && (
                 <div ref={suggestionsRef} className="absolute w-full mt-2 overflow-hidden bg-gray-900 rounded-lg shadow-xl">
                   <div className="max-h-[70vh] overflow-y-auto">
-                    {suggestions.map((result) => {
+                    {suggestions?.map((result) => {
                       if (result.media_type === "movie" && result.poster_path) {
                         return (
                           <Link

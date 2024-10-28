@@ -24,7 +24,7 @@ const HeroSection = () => {
   return (
     <>
       <div className="md:w-screen md:h-screen text-white bg-[#04152D] ">
-        <img className="w-screen  opacity-60 object-cover h-96 md:h-[700px]" src={IMG_CDN_ORG + movies.backdrop_path} alt="" />
+        <img className="w-screen  opacity-60 object-cover h-96 md:h-[700px]" src={IMG_CDN_ORG + movies?.backdrop_path} alt="" />
       </div>
     </>
   );
