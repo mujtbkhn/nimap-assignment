@@ -20,13 +20,18 @@ export const BACKGROUND =
 
 export const USER_AVATAR = "https://api.multiavatar.com/stefan.svg";
 
+export const REACT_APP_TMDB_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZjNlMmRiMjA5Y2UwMjY5MDRmZjMzYWJkMWM1NTU3OCIsInN1YiI6IjY1OWZhMTFmOTA3ZjI2MDEyMjIwZTA2MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nZ8TO-EaAryQd4nbVT2-SfINk8RC4lUTsX8vP1q4j1Q"
+
+export const REACT_APP_ACCOUNT_ID = "20915650"
+
 export const OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
+    Authorization: "Bearer " + REACT_APP_TMDB_KEY,
   },
 };
+
 
 export const IMG_CDN = "https://image.tmdb.org/t/p/w300";
 export const IMG_CDN_ORG = "https://image.tmdb.org/t/p/original";

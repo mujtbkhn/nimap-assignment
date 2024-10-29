@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback, useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
-import { IMG_CDN, IMG_CDN_ORG, OPTIONS } from "../../utils/constants";
+import { IMG_CDN, IMG_CDN_ORG, OPTIONS, REACT_APP_TMDB_KEY } from "../../utils/constants";
 import MovieCard from "../MovieCard";
 import useDebounce from "../../hooks/useDebounce";
 import Header from "../MainContainer/Header";
@@ -107,7 +107,7 @@ const MovieDetails = () => {
       headers: {
         accept: "application/json",
         "Content-Type": "application/json;charset=utf-8",
-        Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
+        Authorization: "Bearer " + REACT_APP_TMDB_KEY,
       },
       body: JSON.stringify({ value: newRating }),
     };

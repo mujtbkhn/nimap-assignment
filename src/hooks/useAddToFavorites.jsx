@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import toast from 'react-hot-toast';
+import { REACT_APP_ACCOUNT_ID, REACT_APP_TMDB_KEY } from '../utils/constants';
 
 const useAddToFavorite = (id, details) => {
     const [favorite, setFavorite] = useState(false);
@@ -19,13 +20,13 @@ const useAddToFavorite = (id, details) => {
 
     // Add to Favorite function
     const addToFavorite = useCallback(async () => {
-        const url = `https://api.themoviedb.org/3/account/${process.env.REACT_APP_ACCOUNT_ID}/favorite`;
+        const url = `https://api.themoviedb.org/3/account/${REACT_APP_ACCOUNT_ID}/favorite`;
         const options = {
             method: "POST",
             headers: {
                 accept: "application/json",
                 "content-type": "application/json",
-                Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
+                Authorization: "Bearer " + REACT_APP_TMDB_KEY,
             },
             body: JSON.stringify({
                 media_type: "movie",

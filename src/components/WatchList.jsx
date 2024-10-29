@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { OPTIONS } from "../utils/constants";
+import { OPTIONS, REACT_APP_ACCOUNT_ID } from "../utils/constants";
 import MovieCard from "./MovieCard";
 import Header from "./MainContainer/Header";
 
@@ -27,7 +27,7 @@ const WatchList = () => {
   const fetchWatchList = async () => {
     try {
       const response = await fetch(
-        `https://api.themoviedb.org/3/account/${process.env.REACT_APP_ACCOUNT_ID}/watchlist/movies?language=en-US&page=1&sort_by=created_at.asc`,
+        `https://api.themoviedb.org/3/account/${REACT_APP_ACCOUNT_ID}/watchlist/movies?language=en-US&page=1&sort_by=created_at.asc`,
         OPTIONS
       );
       const json = await response.json();
